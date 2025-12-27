@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .login {
+            display: block;
+        }
+        .content {
+            display: none;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div id="login" class="login">
+        <h1>Enter the password to see the secret â™¥</h1>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Enter</button>
+    </div>
+    
+    <div id="content" class="content">
+        <h1>A Love Message for You, My Love! ðŸ’–</h1>
+        <p class="heart">â™¥ â™¥ â™¥</p>
+        <p>Your sweet message here: I love you so much, and you're the most precious thing in my life. Every day with you is happy, and I wish we stay like this forever. You're the star that lights up my life! ðŸŒŸ</p>
+        <p>With heart decorations and romantic colors... You can add images or GIFs if you want (like an animated heart from the internet).</p>
+        <p class="heart">â™¥ â™¥ â™¥</p>
+    </div>
+
+    <script>
+        const correctPassword = "love"; // Change this if you want a different password
+        
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === correctPassword) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Wrong password! Try again.");
+            }
+        }
+    </script>
+</body>
+  </html>
